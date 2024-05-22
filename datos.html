@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Persona</title>
+</head>
+<body>
+
+    <h1>DATOS DE LA PERSONA</h1>
+
+    <div id="datos"></div>
+
+    
+</body>
+
+<script>
+    let persona = JSON.parse(localStorage.getItem('persona'));
+    let datos = document.getElementById('datos');
+    datos.innerHTML = '<p> Nombre:' + persona.nombre + '<p> Ciudad:' + persona.ciudad + '<p> provincia:' + persona.provincia +'<p> cp:' + persona.cp +'<p> telefono:' + persona.telefono +'<p> mail:' + persona.mail + '<p> mensaje:' + persona.mensaje
+
+
+</script></html>

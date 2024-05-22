@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+
+}
+
+body {
+
+margin:auto;
+    text-align: center;
+}
+
+.btn-form h2{
+    
+    background-color: #6daee7;
+    border: solid 0.5px black;
+    border-radius: 5px;
+    padding:0.5%;
+    max-width: fit-content;
+    height: fit-content;
+    margin: auto;
+    cursor: pointer;
+    color: black !important;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+	
+
+/* NAVEGADOR */
+
+.TITULOPAGINA {
+    background-color: #296583;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    z-index: 10;
+
+
+}
+
+h1 {
+    text-shadow: 10px black 2px;
+}
+
+
+.navegador-boton {
+    display: inline-block;
+    margin: 2px;
+    align-items: flex-end;
+    z-index: 8;
+
+}
+
+.navegador-boton:hover {
+    display: inline-block;
+    background-color: #005c66;
+    text-decoration: none;
+}
+
+
+
+
+/*BANER ABAJO DE LA BARRA DE NAVEGACION*/
+.SUBTITULOPAGINA {
+
+    background-image: url("img/BANNER11.jpg");
+    background-position-y:bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-text-stroke: 0.1px black;
+    font-size: x-large;
+
+    color: white;
+    font-style: italic;
+    height: 30%;
+    text-rendering: 2px red;
+    box-shadow: 3px 3px 10px #ccc;
+
+
+    padding-top: 100px;
+
+}
+
+
+
+/* CONTENEDOR DE IMAGENES */
+
+.CONTENEDORGRANDE {
+
+
+    display: block;
+    padding: 10px;
+    margin: 3vh;
+    border-radius: 0.5%;
+    box-shadow: 3px 3px 10px #ccc;
+
+
+
+
+}
+
+.card {
+    
+    
+    width: 100%;
+    height: 100%;
+    
+    margin: 10px auto 10%;
+    border-radius: 0.5%;
+    text-align: center;
+    padding: 30px;
+    color: rgb(13, 11, 8);
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+.card .container-img {
+  
+    width: 768px !important;
+    height: 363px !important;
+   
+   
+
+    border: 1px solid black;
+    margin: auto;
+
+}
+
+/* TAMAÑO IMAGEN CARD SLIDER */
+
+#img-paisaje {
+
+    
+  width:100% ;
+
+
+    margin: auto;
+    object-fit: contain;
+    object-position: center center;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    
+   
+}
+
+  
+
+
+
+
+/* BOTON PARA IR AL INICIO DE PAGINA*/
+
+.botonscroll img {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    text-decoration: none;
+    background: #6daee7;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 500ms ease;
+    z-index: 9;
+}
+
+.container-botones .atras-btn, .siguiente-btn{
+    text-decoration: none;
+    background: #6daee7;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 500ms ease;
+    
+}
+
+/*  ACTIVIDADES IMAGENES */
+
+.ACTIVIDADES {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: 1;
+    background-size: contain;
+    width: 100% !important;
+    height: fit-content;
+    font-size: larger;
+    margin: auto ;
+    margin-bottom: 10%;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+
+    color: white;
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+.ACTIVIDADES H2 {
+
+    margin-top: 50%;
+}
+
+.ACTIVIDADES .DEPORTESDEINVIERNO {
+    background-image: url(./img/DEPORTES\ DE\ INVIERNO.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+}
+
+.ACTIVIDADES .DEPORTESDEINVIERNO:hover {
+
+
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+
+
+
+.ACTIVIDADES .TREKKING {
+    background-image: url(./img/TREKKIN\ BARILOCHE.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+}
+
+.ACTIVIDADES .TREKKING:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+.ACTIVIDADES .MIRADORES {
+    background-image: url(./img/MIRADOR\ BARILOCHE.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+
+}
+
+.ACTIVIDADES .MIRADORES:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+}
+
+.ACTIVIDADES .PASEOSACABALLO {
+    background-image: url(./img/PASEO\ A\ CABALLO.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+
+}
+
+.ACTIVIDADES .PASEOSACABALLO:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+/* VIDEOS */
+
+.videos{
+
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 10px #ccc;
+    margin-bottom: 10%;
+    border-radius: 0.5%;
+    
+
+
+}
+
+/*  ACTIVIDADES IMAGENES */
+
+.GASTRONOMIA {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); */
+    grid-template-columns: repeat(5, 1fr);
+    grid-row: 1;
+    background-size: contain;
+    width: 100% !important;
+    height: fit-content;
+    font-size: larger;
+    margin: 10% auto ;
+    margin-bottom: 10%;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+
+    color: white;
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+.GASTRONOMIA H2 {
+
+    margin-top: 50%;
+}
+
+.GASTRONOMIA .RESTAURANTES {
+    background-image: url(./img/RESTAURANTES.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+}
+
+.GASTRONOMIA .RESTAURANTES:hover {
+
+
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+
+
+
+.GASTRONOMIA .CHOCOLATERIA {
+    background-image: url(./img/CHOCOLATERIA.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+}
+
+.GASTRONOMIA .CHOCOLATERIA:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+.GASTRONOMIA .CASADETE {
+    background-image: url(./img/CASADETE.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+
+}
+
+.GASTRONOMIA .CASADETE:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+}
+
+.GASTRONOMIA .VINOS {
+    background-image: url(./img/VINOS.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+
+}
+
+.GASTRONOMIA .VINOS:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+.GASTRONOMIA .CONFITERIA {
+    background-image: url(./img/CONFITERIA.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: auto;
+
+}
+
+.GASTRONOMIA .CONFITERIA:hover {
+    transition: 1.5s;
+    transform: scale(1.15);
+
+}
+
+/* BOTONERA FIJA */
+.botonera {
+    z-index: 11;
+}
+
+.botonera .redes img {
+    width: 25px;
+    height: 25px;
+}
+
+.botonera .btn-mas img {
+
+    width: 25px;
+    height: 25px;
+}
+
+#btn-mas {
+    display: none;
+}
+
+.botonera {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.redes a,
+.btn-mas2 {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    background: #6daee7;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 500ms ease;
+}
+
+.redes a:hover {
+    background: white;
+
+}
+
+.btn-mas2:hover {
+    background: white;
+
+}
+
+.redes a {
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-mas:checked~.redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#btn-mas:checked~.btn-mas .btn-mas2 {
+    background-color: gray;
+
+}
+
+
+
+
+/*IMAGEN DENTRO DEL CARD SLIDER */
+
+
+
+.card .titulo {
+    color: black;
+    letter-spacing: 3px;
+}
+
+.card .subtitulo {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .info {
+    background-color: #6ea7d1;
+    border-radius: 0.5%;
+    box-shadow: 3px 3px 10px #ccc;
+    width: 100%;
+    min-height: 10%;
+    padding: 1%;
+    height: 15vh;
+    color: black;
+    margin-bottom: 20px;
+}
+
+
+
+button {
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0 20px;
+    color: #018980;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: lightskyblue;
+
+}
+
+.card:before,
+.card .container-img::after {
+
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.card .container-img:before {
+    transform: rotate(45deg) translateY(-550px) translateX(20px)
+}
+
+.card .container-img::after {
+    transform: rotate(45deg) translateY(550px) translateX(-60px)
+}
+
+/* .card .container-img:hover {
+    opacity: 85%;
+    transform: scale(1.05);
+    transition: 2s;
+} */
+
+/* ESTILO DEL FORMULARIO DE CONTACTO */
+
+
+
+.FORMULARIO01 {
+    margin: 20px auto;
+   display: none;
+   padding: 10px;
+
+    width: 60vw;
+    margin-top: 20px;
+  
+    background-color:#6ea7d1;
+    background-clip: border-box;
+  
+    box-shadow: 3px 3px 10px #ccc;
+}
+#mensaje{
+    height: 50px;
+    width: 100%;
+    resize: none;
+}
+
+
+
+.buscador {
+    width: 250px;
+    display: flex;
+
+
+
+}
+
+.busqueda {
+    border: 1px solid white;
+    color: white;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+#register {
+    border: 1px solid white;
+    color: white;
+
+
+    margin-left: 3px;
+    margin-top: 2px;
+
+
+}
+
+
+
+
+
+.row {
+
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+.col {
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+
+}
+
+textarea {
+
+    max-width: 800px;
+
+    margin: auto;
+
+
+}
+
+.controls {
+    border: 1px solid white;
+    width: 100%;
+    border-radius: 0.5%;
+    padding: 10px;
+    margin: 3px;
+    background-color: lightskyblue;
+    color: black;
+    border: 1 px solid rgb(163, 155, 155);
+    font-size: 15px;
+
+
+}
+
+.navbar-brand:hover {
+    opacity: 100% !important;
+}
+
+#home {
+    text-align: center;
+}
+
+.footer {
+
+   
+    margin-top: 10%;
+    margin-left: 0%;
+    height: min-content;
+    margin-left: 0;
+    width: 100%;
+    background-color: rgb(123, 120, 120);
+    color: white;
+  text-align: center;
+    z-index: -1;
+}
+#redessociales:hover{
+    opacity: 50%;
+    cursor:pointer;
+
+}
+.mapa {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    z-index: -2;
+}
+
+.TITULOPAGINA a:link{
+    text-decoration: none !important;
+    list-style: none !important;
+    color: #fff;
+}
+
+
+a{
+    text-decoration: none !important;
+    list-style: none !important;
+}
+a:link {
+    text-decoration: none !important;
+    list-style: none !important;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 90%;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none
+}
+
+
+@media (max-width: 880px) {
+   body{
+       
+    min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+     
+    }
+
+    .TITULOPAGINA{
+        flex-basis: 100%;
+       
+        margin: 0;
+       
+    
+    }
+
+    .SUBTITULOPAGINA{
+   
+        flex-basis: 100%;
+       
+    }
+
+    .primersubtitulo{
+       margin: 0;
+       
+        flex-basis: 100%;
+       
+    
+        
+        }
+
+    .CONTENEDORGRANDE{
+        margin: 0;
+        flex-basis: 100% ;
+      
+    } 
+   
+    .card{
+        height: fit-content;
+        width: 100%;
+    height: 100%;
+        margin: 0;
+        flex-basis: 100%;
+    }
+
+    .card .subtitulo{
+        height: 10vh;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .card .container-img{
+        
+        margin: 0   ;
+        flex-basis:100% ;
+        width: 100% !important;
+    }
+    .card .info {
+
+        height: 35vh;
+    }
+
+    .ACTIVIDADES{
+            display: grid;
+           height: 100%;
+            grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .videos{
+        flex-basis: 100%;
+        margin: 0;
+
+    }
+
+    .videos iframe {
+        width: 90%;
+    }
+    .GASTRONOMIA{
+                  display: grid;
+           height: 100%;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            align-items: center;
+
+    }
+
+    .GASTRONOMIA .CONFITERIA{
+        grid-template-columns: repeat(1, 1fr);
+        grid-column: 1 / -1;
+        object-fit: contain;
+        
+
+    }
+
+    .FORMULARIO01{
+        flex-basis: 100%;
+
+    }
+
+    .row{
+        width: 90%;
+    }
+
+    .botonera {
+        margin-bottom: 5vh;
+        }
+
+    .botonscroll img{
+        margin-bottom: 5vh;
+        }
+   } 
+   
+  
