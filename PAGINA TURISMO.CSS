@@ -8,7 +8,34 @@
     box-sizing: border-box;
 
 }
-
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+/* Estilos para los botones */
+.btn {
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
 body {
 
 margin:auto;
