@@ -81,6 +81,151 @@
 
     <!-- IMAGENES DE LAS ACTIVIDADES -->
 
+    <h2>CRUD Atracciones Turísticas en Bariloche</h2>
+<button class="btn btn-primary" onclick="openForm()">Agregar Nueva Atracción (CREATE)</button>
+
+<!-- Buscador -->
+<input type="text" id="searchInput" onkeyup="searchAttractions()" placeholder="Buscar por nombre (GET)...">
+
+<!-- Formulario para agregar/editar -->
+<div id="formPopup" style="display: none;">
+    <h3>Formulario</h3>
+    <label for="attractionName">Nombre de la Atracción:</label>
+    <input type="text" id="attractionName">
+    <br><br>
+    <label for="attractionViaje">Viaje:</label>
+    <input type="text" id="attractionViaje">
+    <br><br>
+    <label for="attractionDias">Días:</label>
+    <input type="text" id="attractionDias">
+    <br><br>
+    <label for="attractionPrecio">Precio:</label>
+    <input type="text" id="attractionPrecio">
+    <br><br>
+    <button class="btn btn-primary" onclick="saveAttraction()">Guardar</button>
+    <button class="btn btn-danger" onclick="closeForm()">Cancelar</button>
+</div>
+
+<!-- Tabla para mostrar atracciones -->
+<table id="attractionTable">
+    <thead>
+        <tr>
+            <th>Atracción</th>
+            <th>Viaje</th>
+            <th>Días</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="attractionTableBody">
+        <!-- Aquí se llenarán los datos dinámicamente -->
+    </tbody>
+</table>
+
+<script>
+    // Array para simular una base de datos de atracciones con más información
+    let attractions = [
+        { name: "Cerro Otto", viaje: "Viaje 1", dias: "3 días", precio: "$200" },
+        { name: "Isla Victoria", viaje: "Viaje 2", dias: "2 días", precio: "$150" },
+        { name: "Circuito Chico", viaje: "Viaje 3", dias: "1 día", precio: "$100" },
+        { name: "Cerro Tronador", viaje: "Viaje 4", dias: "4 días", precio: "$250" }
+    ];
+
+    // Función para abrir el formulario de agregar/editar
+    function openForm() {
+        document.getElementById("formPopup").style.display = "block";
+    }
+
+    // Función para cerrar el formulario
+    function closeForm() {
+        document.getElementById("formPopup").style.display = "none";
+    }
+
+    // Función para guardar la atracción ingresada en el formulario
+    function saveAttraction() {
+        let attractionName = document.getElementById("attractionName").value;
+        let attractionViaje = document.getElementById("attractionViaje").value;
+        let attractionDias = document.getElementById("attractionDias").value;
+        let attractionPrecio = document.getElementById("attractionPrecio").value;
+
+        if (attractionName && attractionViaje && attractionDias && attractionPrecio) {
+            // Simular operación de guardar en la base de datos
+            attractions.push({ name: attractionName, viaje: attractionViaje, dias: attractionDias, precio: attractionPrecio });
+            // Limpiar el formulario y actualizar la tabla
+            document.getElementById("attractionName").value = "";
+            document.getElementById("attractionViaje").value = "";
+            document.getElementById("attractionDias").value = "";
+            document.getElementById("attractionPrecio").value = "";
+            renderAttractionTable();
+            closeForm();
+        } else {
+            alert("Por favor complete todos los campos.");
+        }
+    }
+
+    // Función para renderizar la tabla con las atracciones actualizadas
+    function renderAttractionTable() {
+        let tableBody = document.getElementById("attractionTableBody");
+        tableBody.innerHTML = "";
+        attractions.forEach((attraction, index) => {
+            let row = `
+                <tr>
+                    <td>${attraction.name}</td>
+                    <td>${attraction.viaje}</td>
+                    <td>${attraction.dias}</td>
+                    <td>${attraction.precio}</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="editAttraction(${index})">Editar (Put)</button>
+                        <button class="btn btn-danger" onclick="deleteAttraction(${index})">Eliminar (Delete)</button>
+                    </td>
+                </tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    // Función para editar una atracción existente
+    function editAttraction(index) {
+        let newName = prompt("Ingrese el nuevo nombre de la atracción:", attractions[index].name);
+        if (newName !== null && newName !== "") {
+            attractions[index].name = newName;
+            renderAttractionTable();
+        }
+    }
+
+    // Función para eliminar una atracción
+    function deleteAttraction(index) {
+        if (confirm(`¿Está seguro que desea eliminar "${attractions[index].name}"?`)) {
+            attractions.splice(index, 1);
+            renderAttractionTable();
+        }
+    }
+
+    // Función para buscar atracciones por nombre
+    function searchAttractions() {
+        let input = document.getElementById("searchInput");
+        let filter = input.value.toUpperCase();
+        let table = document.getElementById("attractionTable");
+        let tr = table.getElementsByTagName("tr");
+        for (let i = 0; i < tr.length; i++) {
+            let td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                let txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    // Inicializar la tabla al cargar la página
+    renderAttractionTable();
+</script>
+
+    
+    
+
     <p>
     <h1>¡MUCHISIMAS ATRACCIONES!</h1><br>
     </p>
